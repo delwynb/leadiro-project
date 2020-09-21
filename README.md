@@ -30,7 +30,7 @@ Returns a JSON of the postcode and its region.
 
 Example usage:
 - Invalid postcode [http://localhost:8090/validate/postcode?postcode=LEADIRO](http://localhost:8090/validate/postcode?postcode=LEADIRO)
-- Valid postcode [http://localhost:8090/validate/postcode?postcode=EC2Y209DT](http://localhost:8090/validate/postcode?postcode=EC2Y209DT)
+- Valid postcode [http://localhost:8090/validate/postcode?postcode=EC2Y9DT](http://localhost:8090/validate/postcode?postcode=EC2Y9DT)
 
 ### Name Cleaning Algorithm
 
