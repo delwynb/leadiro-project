@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan({"com.leadiro"})
 public class Application implements ApplicationRunner {
-    private static final String APP_NAME = "starter";
+    private static final String APP_NAME = "Leadiro Project";
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
