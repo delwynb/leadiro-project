@@ -8,8 +8,11 @@
 - Dealing With Data Search and Get Record API
 
 ## Build and Run using Docker
-- `docker build -t leadiro-project-delwynb .`
-- `docker run -d -p 80:8090 leadiro-project-delwynb`
+##### Required Java 13, Maven, Docker
+- Clean build `mvn clean`
+- Build jar `mvn package -DskipTests`
+- Build Image `docker build -t leadiro-project-delwynb .`
+- Run Image as daemon `docker run -d -p 80:8090 leadiro-project-delwynb`
 
 
 ## Basic Authentication
