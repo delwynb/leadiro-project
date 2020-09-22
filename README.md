@@ -7,6 +7,11 @@
 - Name Cleaning Algorithm API
 - Dealing With Data Search and Get Record API
 
+## Build and Run using Docker
+- `docker build -t leadiro-project-delwynb .`
+- `docker run -d -p 80:8090 leadiro-project-delwynb`
+
+
 ## Basic Authentication
 
 Added a basic authentication for the application with configurable admin username and password.
