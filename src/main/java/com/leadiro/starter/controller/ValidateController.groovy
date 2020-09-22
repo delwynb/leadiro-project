@@ -17,12 +17,12 @@ class ValidateController {
     @Autowired
     private ValidateService service;
 
-    @GetMapping('email')
+    @GetMapping("email")
     def validateEmail(@RequestParam String email) {
         return service.validateEmailFormat(email)
     }
 
-    @GetMapping('postcode')
+    @GetMapping("postcode")
     def validateUkPostCode(@RequestParam String postcode) {
         return service.validateUKPostCode(postcode)
     }
