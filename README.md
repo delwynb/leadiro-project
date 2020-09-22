@@ -1,13 +1,11 @@
 # Leadiro Project by delwynb 🚀
 
-A Project for Leadiro
-
-What does it include:
+### What does it include:
 
 - Basic Authentication
 - Email and Post Code validation APIs
-- Name Cleaning Algorithm
-- Dealing With Data
+- Name Cleaning Algorithm API
+- Dealing With Data Search and Get Record API
 
 ## Basic Authentication
 
@@ -23,6 +21,10 @@ Defaults to `admin/password123`
 
 Email validation API - validates email parameter and returns a JSON response of the result. 
 
+API 
+* GET `http://localhost:8090/validate/email`
+* PARAMETERS - email
+
 #### Example usage:
 - Invalid email [http://localhost:8090/validate/email?email=abc@xyc](http://localhost:8090/validate/email?email=abc@xyc)  
 - Valid email [http://localhost:8090/validate/email?email=abc@xyc.com](http://localhost:8090/validate/email?email=abc@xyc.com)  
@@ -30,6 +32,10 @@ Email validation API - validates email parameter and returns a JSON response of 
 UK Post Code validation API - validates the postcode parameter using `https://postcodes.io/` APIs.
 First checks if the postcode is valid before requesting for the postcode details.
 Returns a JSON of the postcode and its region.
+
+API 
+* GET `http://localhost:8090/validate/postcode`
+* PARAMETERS - postcode
 
 #### Example usage:
 - Invalid postcode [http://localhost:8090/validate/postcode?postcode=LEADIRO](http://localhost:8090/validate/postcode?postcode=LEADIRO)
@@ -44,6 +50,7 @@ Invalid name strings marked as `Unable to parse this invalid value` on last fiel
 
 API 
 - POST [http://localhost:8090/parse/name](http://localhost:8090/parse/name)
+- BODY - JSON array of Strings
 - Example JSON BODY 
 ```
 [
@@ -180,6 +187,7 @@ This part implements end points for searching and retrieving data from
 API
 
 - POST `http://localhost:8090/museum`
+- BODY - JSON Array of Strings
 - Example JSON Body
 ```
 [
@@ -279,6 +287,7 @@ API
 API
 
 - GET `http://localhost:8090/museum/{id}`
+- PATH VARIABLE - id
 - Example Request [http://localhost:8090/museum/2004136](http://localhost:8090/museum/2004136)
 - Example Response
 ```
