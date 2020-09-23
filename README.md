@@ -14,6 +14,12 @@
 - Build Image `docker build -t leadiro-project-delwynb .`
 - Run Image as daemon `docker run -d -p 80:8090 leadiro-project-delwynb`
 
+## Swagger UI
+I added Swagger UI for API documentation and to easily visualize and interact with the APIs
+
+- Can be accessed on [http://localhost:8090/swagger-ui.html](http://localhost:8090/swagger-ui.html)
+- or when running in Docker [http://localhost/swagger-ui.html](http://localhost/swagger-ui.html) 
+ 
 
 ## Basic Authentication
 

@@ -5,8 +5,10 @@ import com.leadiro.starter.service.MuseumService;
 import com.leadiro.starter.service.museum.dto.Record;
 import com.leadiro.starter.service.museum.dto.RecordTitle;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
@@ -48,9 +50,10 @@ public class ConcreteMuseumService implements MuseumService {
     if (nonNull(record)) {
       return record;
     } else {
-      log.info(String.format("Record ID %s does not exist", id));
+      log.info(String.format("Record ID %s not found", id));
+      throw new ResponseStatusException(
+          HttpStatus.NOT_FOUND, String.format("Record ID %s not found", id));
     }
-    return null;
   }
 
   private Record findRecordIdFromAPIs(String id) {

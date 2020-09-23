@@ -7,6 +7,8 @@ server:
   compression:
     enabled: true
     mime-types: application/json
+  error:
+    include-message: always
 
 admin:
   username: admin
