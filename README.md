@@ -17,8 +17,13 @@
 ## Swagger UI
 I added Swagger UI for API documentation and to easily visualize and interact with the APIs
 
-- Can be accessed on [http://localhost:8090/swagger-ui.html](http://localhost:8090/swagger-ui.html)
-- or when running in Docker [http://localhost/swagger-ui.html](http://localhost/swagger-ui.html) 
+##### Running on 8090
+- UI can be accessed on [http://localhost:8090/swagger-ui.html](http://localhost:8090/swagger-ui.html)
+- API Docs [http://localhost:8090/v2/api-docs](http://localhost:8090/v2/api-docs)
+
+##### On Docker
+- or when running in Docker [http://localhost/swagger-ui.html](http://localhost/swagger-ui.html)
+- API Docs [http://localhost/v2/api-docs](http://localhost/v2/api-docs) 
  
 
 ## Basic Authentication
