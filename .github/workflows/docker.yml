@@ -15,9 +15,9 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 13  
-      - name: Clean
+      - name: Maven Clean
         run: mvn clean
-      - name: Build Jar   
+      - name: Maven Package   
         run: mvn package -DskipTests
       - name: Build Docker Image
-        run: docker build -t leadiro-project-delwynb     
+        run: docker build -t leadiro-project-delwynb .
