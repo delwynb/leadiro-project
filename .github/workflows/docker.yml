@@ -34,4 +34,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
           repository: delwynb/leadiro-project/leadiro-project-delwynb
+          tags: delwynb/leadiro-project-delwynb:latest
           tag_with_ref: true
