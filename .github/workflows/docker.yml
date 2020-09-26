@@ -33,5 +33,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: delwynb/leadiro-project/leadiro-project-delwynb@latest
+          repository: delwynb/leadiro-project/leadiro-project-delwynb
           tag_with_ref: true
