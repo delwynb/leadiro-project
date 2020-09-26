@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Clean and Build
-        run: |
-          mvn clean,
-          mvn package -DskipTests
+      - name: Clean
+        run: mvn clean
+      - name: Build Jar   
+        run: mvn package -DskipTests
