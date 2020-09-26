@@ -19,14 +19,19 @@ jobs:
       - name: Maven clean
         run: mvn clean
       - name: Maven package   
-        run: mvn package -DskipTests
-      - name: Docker login
-        env: 
-          DOCKER_USER: ${{ secrets.DOCKER_USER }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-      - name: Build docker image
-        run: docker build -t leadiro-project-delwynb .
-      - name: Push docker image
-        run: docker push leadiro-project-delwynb
+        run: mvn package -DskipTests      
+        
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: delwynb/leadiro-project:latest
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
       
